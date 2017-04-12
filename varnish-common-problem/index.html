@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Module pattern</title>
+  <style>
+    .active {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Varnish la bidouille</h1>
+
+  <!-- this is an ESI, I want it to be as static as possible -->
+  <h2>Menu</h2>
+  <ul>
+    <li id="55652">page1</li> <!-- here the id is the locationId -->
+    <li id="30593">page2</li>
+    <li id="30595">page3</li>
+  </ul>
+  <!-- end ESI -->
+
+  <!-- <script>
+    var varnishMenuParams = {
+      currentLocationId: 30593 // this is render dynamically in TWIG
+    }
+  </script> -->
+  <script src="varnish-menu.js"></script>
+</body>
+</html>
